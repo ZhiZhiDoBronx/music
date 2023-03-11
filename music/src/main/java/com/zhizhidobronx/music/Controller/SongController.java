@@ -1,7 +1,6 @@
 package com.zhizhidobronx.music.Controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.zhizhidobronx.music.domain.Singer;
 import com.zhizhidobronx.music.domain.Song;
 import com.zhizhidobronx.music.service.SongService;
 import com.zhizhidobronx.music.utils.Consts;
