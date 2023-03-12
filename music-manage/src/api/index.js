@@ -30,7 +30,7 @@ export const allSong = () => get(`song/allSong`);
 
 //============歌单相关================
 //查询歌单
-export const getAllSongList = () => get(`songList/allSongList`);
+export const getAllSongList = ()  => get(`songList/allSongList`);
 //添加歌单
 export const setSongList = (params) => post(`songList/add`, params);
 //编辑歌单

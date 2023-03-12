@@ -75,6 +75,12 @@
             </exclusions>
         </dependency>
 
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+
         <!--导入Lombok依赖-->
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
@@ -84,6 +90,11 @@
             <!--这里是设置作用域-->
             <!--注释作用域，表明我想让它为全局使用-->
             <!--<scope>provided</scope>-->
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.14.3</version>
         </dependency>
 
     </dependencies>
