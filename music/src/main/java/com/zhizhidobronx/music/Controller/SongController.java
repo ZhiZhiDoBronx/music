@@ -171,6 +171,21 @@ public class SongController {
     }
 
     /**
+     * @Description: 查询所有歌曲
+     * @Param: [request]
+     * @return: java.lang.Object
+     * @Author: zhizhi
+     * @Date: 2023/2/27 21:35
+     * @throws:
+     * @Other:
+
+     */
+    @RequestMapping(value = "/allSong", method = RequestMethod.GET)
+    public Object allSinger(HttpServletRequest request) {
+        return songService.allSong();
+    }
+
+    /**
      * @Description: 更新歌曲图片
      * @Param: [avatorFile, id]
      * @return: java.lang.Object
@@ -277,5 +292,23 @@ public class SongController {
         }finally {
             return jsonObject;
         }
+    }
+
+    /**
+     * 根据歌曲id查询歌曲对象
+     */
+    @RequestMapping(value = "/detail",method = RequestMethod.GET)
+    public Object detail(HttpServletRequest request){
+        String songId = request.getParameter("songId");
+        return songService.selectByPrimaryKey(Integer.parseInt(songId));
+    }
+
+    /**
+     * 根据歌手id查询歌曲
+     */
+    @RequestMapping(value = "/songOfSongName",method = RequestMethod.GET)
+    public Object songOfSongName(HttpServletRequest request){
+        String songName = request.getParameter("songName");
+        return songService.songOfName(songName);
     }
 }

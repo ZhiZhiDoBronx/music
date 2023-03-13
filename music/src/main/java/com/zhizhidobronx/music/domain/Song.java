@@ -13,7 +13,7 @@ import java.util.Date;
 public class Song implements Serializable {
     /*主键*/
     private Integer id;
-    //歌手id
+    /*歌手id*/
     private Integer singerId;
     /*歌名*/
     private String name;
